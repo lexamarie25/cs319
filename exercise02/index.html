@@ -1,13 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
     </head>
         <title>Unit 2 Excercise</title>
         <meta charset="utf-8">
+    <link href="styles.css" rel="stylesheet">
     <body>
-   
-
-
+        <h1>Manage Subscription</h1>
+        <form name="subscription" action="#" method="get">
+            <table>
+                <tr>
+                    <th>Newsletter</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>Athletics</td>
+                    <td>
+                        <input type="radio" name="athletics" value="athleticsSubscribe">Subscribe<br>
+                        <input type="radio" name="athletics" value="athleticsUnsubscribe">Unsubscribe
+                    </td>
+                </tr>
+                <tr>
+                    <td>Films</td>
+                    <td>
+                        <input type="radio" name="films" value="filmsSubscribe">Subscribe<br>
+                        <input type="radio" name="films" value="filmsUnsubscribe">Unsubscribe
+                    </td>
+                <tr>   
+                </tr>
+                <tr>
+                    <td>Campus News</td>
+                    <td>
+                        <input type="radio" name="campus" value="campusSubscribe">Subscribe<br>
+                        <input type="radio" name="campus" value="campussUnsubscribe">Unsubscribe
+                    </td>
+                </tr>
+            </table>
+            <p><input type="submit" value="Update"></p>
+        </form>
     </body>
     
 </html>
