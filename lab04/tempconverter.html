@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab 4</title>
+    </head>
+        <meta charset="utf-8">
+    <body>
+        <h1>Temperature Converter</h1>
+        <script>
+            function myFunction() {
+                
+                var fahrenheit = parseFloat (document.getElementById("tempfahr").value);
+                var celsius = (fahrenheit - 32) * (5/9);
+                
+                document.getElementById("tempcels").value = celsius;
+                document.temp.tempcels.style.backgroundColor = "green";
+                document.temp.tempfahr.style.backgroundColor = "white";
+                
+            }
+                
+            function myFunction2() {
+                
+                var celsius = parseFloat (document.getElementById("tempcels").value);
+                var fahrenheit = (celsius * 9/5) + 32; 
+                
+                document.getElementById("tempfahr").value = fahrenheit;
+                document.temp.tempfahr.style.backgroundColor = "green";
+                document.temp.tempcels.style.backgroundColor = "white";
+                
+                
+                
+            }
+                
+          
+            
+        </script>
+        <form name="temp" id="converter" action="#" method="get">
+            <p>Temperature in Fahrenheit:<br><input type="text" name="tempfahr" id="tempfahr"></p>
+            
+            <input type="button" name="fahr" id="fahr" value="F to C" onclick="myFunction();">
+           
+            <input type="button" name="cels" id="cels" value="C to F" onclick="myFunction2();">
+            
+            <p>Temperature in Celsius:<br><input type="text" name="tempcels" id="tempcels"></p>
+            
+            
+        </form>
+        <p id="words"></p>
+        
+    </body>
+    
+</html>

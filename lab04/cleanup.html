@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab 4</title>
+    </head>
+        <meta charset="utf-8">
+    <body>
+        <h1>Name Cleanup</h1>
+        <script>
+            function check(){
+                var first = document.name.firstName.value;
+                var middle = document.name.middleName.value;
+                var last = document.name.lastName.value;
+                var full = document.name.result.value; 
+                
+                first = first.trim();
+                middle = middle.trim();
+                last = last.trim();
+                
+                first = first.toUpperCase();
+                middle = middle.toUpperCase();
+                last = last.toUpperCase();
+                
+                document.getElementById("result").value =  
+                    first + " " + middle + " "  + last;
+                
+            }
+            
+               function trimmed(){
+                var first = document.name.firstName.value;
+                var middle = document.name.middleName.value;
+                var last = document.name.lastName.value;
+                var full = document.name.result.value; 
+                document.getElementById("words").innerHTML =  
+                    first + " " + middle + " "  + last;
+                
+            }
+            
+               function uCase(string){
+                var first = document.name.firstName.value;
+                var middle = document.name.middleName.value;
+                var last = document.name.lastName.value;
+                var full = document.name.result.value; 
+                document.getElementById("words").innerHTML =  
+                    first + " " + middle + " "  + last;
+                
+            }
+        </script>
+        <form name="name" id="myname" action="#" method="get">
+            <p>First Name:<br><input type="text" name="firstName" id="firstName"></p>
+            
+            <p>Middle Name:<br><input type="text" name="middleName" id="middleName"></p>
+            
+            <p>Last Name:<br><input type="text" name="lastName" id="lastName"></p>
+            
+            <p><input type="button" name="cleanup" id="cleanup" value="Cleanup Name" onclick="check();"></p>
+            
+            <p>Full Name:<br><input type="text" name="result" id="result"></p>
+        
+        </form>
+        <p id="words"></p>
+        
+    </body>
+    
+</html>
