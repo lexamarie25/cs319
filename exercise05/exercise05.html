@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 4</title>
+    </head>
+        <meta charset="utf-8">
+    <body>
+        <h1>Months</h1>
+        <script>
+            function monthscheck(){
+               var month = document.months.monthName.value;
+                
+            if (month == 1) {
+            alert("January");
+        } else if (month == 2) {
+            alert("Feburary");
+        } else if (month == 3) {
+            alert("March");
+        } else if (month == 4) {
+            alert("April");
+        } else if (month == 5) {
+            alert("May");
+        } else if (month == 6) {
+            alert("June");
+        } else if (month == 7) {
+            alert("July");
+        } else if (month == 8) {
+            alert("August");
+        } else if (month == 9) {
+            alert("Sepetember");
+        } else if (month == 10) {
+            alert("October");
+        } else if (month == 11) {
+            alert("November");
+        } else if (month == 12) {
+            alert("December");
+        } else if (month == 15) {
+            alert("I don't think that number corresponds to a month");
+            }}
+    
+        </script>
+        <form name="months" id="example" action="#" method="get">
+            <p>Month Number:<input type="text" name="monthName" id="monthName"></p>
+             
+            <p><input type="button" name="tell" id="tell" value="Submit" onclick="monthscheck();"></p>
+        
+        </form>
+    <hr>
+        <p id="words"></p>
+        
+    </body>
+    
+</html>

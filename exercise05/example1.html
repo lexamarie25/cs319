@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 4</title>
+    </head>
+        <meta charset="utf-8">
+    <body>
+        <script>
+            function check(){
+                var name = document.madlib.sampleName.value;
+                var number = document.madlib.sampleNum.value;
+                var color = document.madlib.favcolor.value;
+                var animal = document.madlib.favanimal.value; 
+                
+                name = name.trim();
+                number = number.trim();
+                color = color.trim();
+                animal = animal.trim();
+                
+                  
+                document.getElementById("words").value =  
+                    name + " owns " + number + " little "  + color + " " + animal +"!";
+                
+                if (name == "") {
+                    alert("Please enter your name.");
+                    document.madlib.sampleName.focus();
+                    return false;
+                } else if (number == ""){
+                    return false;
+                } else if (color == "") {
+                    return false;
+                } else if (animal == "") {
+                    return false;
+                } else {
+                    return true;
+                }
+              
+                
+            }
+       
+        </script>
+        <form name="madlib" id="example" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return tellstory();">
+            <p>Name:<input type="text" name="sampleName" id="sampleName"></p>
+            
+            <p>Number:<input type="text" name="sampleNum" id="sampleNum"></p>
+            
+            
+            <p>Color:<br>
+            <input type="radio" name="favcolor" id="black1" value="black">Black</p>
+            <p><input type="radio" name="favcolor" id="brown1" value="brown">Brown</p>
+            <p><input type="radio" name="favcolor" id="orange1" value="orange">Orange</p>
+            
+            <p>Animal (plural):<br><select name="favanimal" id="favanimal">
+                <option value=""></option>
+                <option value="dogs">Dogs</option>
+                <option value="cats">Cats</option>
+                <option value="monkies">Monkies</option>
+                
+                </select>
+            
+            
+            
+            
+            <p><input type="submit" name="tell" id="tell" value="Tell story!"></p>
+         <p id="words"></p>
+            <p><input type="text" id="words"></p>
+        </form>
+    <hr>
+       
+        
+    </body>
+    
+</html>
