@@ -6,12 +6,20 @@
     </head>
         <body>
             <script> 
-            function showValues() {
-            var color;
+            function validate(){
+                //alert("Test");
+                var id_num = document.getElementById("clickhere");
                 
-                color = document.favcolor.color.value;
-                alert(color);
-                }
+                if (id_num.value == "") {
+                    alert("Please enter your favorite color.");
+                    id_num.focus();
+                    return false;
+                } else if (isNaN(id_num.value)== true){
+                    alert("Your color is not valid.");
+                    id_num.focus();
+                    return false;
+                }      
+            }
             </script>
               
             
@@ -22,7 +30,7 @@
         <p>
             
         <input type="text" name="color" id="colorname">
-        <input type="button" name="clickhere" id="clickhere" value="Click here!" onclick="showValues();"></p>
+        <input type="button" name="clickhere" id="clickhere" value="Click here!" onclick="validate();"></p>
       
         </form>
            
