@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab 5</title>
+        <meta charset="utf-8">
+        
+         <script>
+        
+            function formValidate() {
+                //alert("Hello World");
+                
+                var firstName = document.getElementById("firstName").value;
+                var lastName = document.getElementById("lastName").value;
+                var address = document.getElementById("address").value;
+                
+                
+                if (firstName == "") {
+                alert("Please fill in your first name");
+               document.form.firstName.focus();
+                    return false;
+             } else if (lastName == "") {
+                alert("Please fill in your last name");
+                document.form.lastName.focus();
+                    return false;
+             }    else if (address == ""){
+                alert("Please fill in your email address");
+                document.form.address.focus();
+                    return false;
+                }
+            
+            }
+           
+        
+        
+        
+        </script>
+        
+    </head>
+        
+    <body>
+        
+        <form name="form" id="myname" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return formValidate();">
+            <p>First Name:<br><input type="text" name="firstName" id="firstName"></p>
+              
+            <p>Last Name:<br><input type="text" name="lastName" id="lastName"></p>
+            
+            <p>Email Address:<br><input type="text" name="address" id="address"></p>
+          
+            <input type="submit" name="sub" id="sub">
+        
+        </form>
+    </body>
+    
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab 4</title>
+        <meta charset="utf-8">
+        
+              <script>
+                
+            function tempConvert() {
+                
+                //alert("Test");
+                
+                if (document.getElementById("cels").checked==true) {
+                 //alert("true")
+                    
+                var celsius = parseFloat (document.getElementById("tempcels").value);
+                var fahrenheit = (celsius * 9/5) + 32;     
+                    
+                document.getElementById("tempfahr").value = fahrenheit;
+                document.temp.tempfahr.style.backgroundColor = "lightpink";
+                document.temp.tempcels.style.backgroundColor = "white";
+                    return false;
+                
+                } else if (document.getElementById("fahr").checked==true) {
+                 //alert("true again")
+                
+                 var fahrenheit = parseFloat
+                 (document.getElementById("tempfahr").value);
+                var celsius = (fahrenheit - 32) * (5/9);
+                 
+                document.getElementById("tempcels").value = celsius;
+                document.temp.tempcels.style.backgroundColor = "lightpink";
+                document.temp.tempfahr.style.backgroundColor = "white";   
+                    return false;
+                }
+                
+            }
+          
+            
+        </script>
+        
+    </head>
+        
+    <body>
+        <h1>Temperature Converter</h1>
+  
+        <form name="temp" id="converter" action="#" method="get">
+            <p>Temperature in Fahrenheit:<br><input type="text" name="tempfahr" id="tempfahr"></p>
+            
+            <input type="radio" name="radiobutton" id="fahr" value="F to C" >F to C <br>
+           
+            <input type="radio" name="radiobutton" id="cels" value="C to F" >C to F
+            
+            <p>Temperature in Celsius:<br><input type="text" name="tempcels" id="tempcels"></p>
+            
+            <input type="button" name="convert" id="convert" value="Convert" onclick="tempConvert();">
+            
+            
+        </form>
+        <p id="words"></p>
+        
+    </body>
+    
+</html>
