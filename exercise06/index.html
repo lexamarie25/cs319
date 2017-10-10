@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 6</title>
+    </head>
+        <meta charset="utf-8">
+    <body>
+        <h1>Guess the number!</h1>
+        <script>
+            
+            function preformtask() {
+            var x;
+            var y;
+            
+            x = 25;
+            //alert(x);
+            y = document.getElementById("numGuess").value;
+            y = y.trim();
+            
+                
+            if (y == "") {
+            alert("Error, fill in a number please.");
+                document.getElementById("numGuess").focus();
+                return false;
+            } else if (isNaN(y.trim()) == true) {
+                alert("Please fill in a number.");
+                document.getElementById("numGuess").select();
+                return false;    
+            } else if ((y.trim() < 1) || (y.trim() > 30)){
+                alert("Please guess a number between 1 and 30");
+                document.getElementById("numGuess").select();
+                return false;
+            } else if (y.trim() < 25) {
+                alert("Your number is too low. Please guess a higher number.");
+                document.getElementById("numGuess").select();
+                return false;  
+                
+            } else if (y.trim() >25) {
+                alert("Your number is too high. Please guess a lower number.");
+                document.getElementById("numGuess").select(); 
+                return false;  
+            } else if (y.trim() == 25){
+                alert("Congratulations! You guessed the correct number!")
+                return true;
+            }
+            
+            
+            }
+    
+        </script>
+        <form name="number" id="example" action="#" method="get" onsubmit="preformtask();">
+            <p>Number:<input type="text" name="numGuess" id="numGuess"></p>
+             
+            <input type="submit" name="guess" id="guess" value="Submit">
+        
+        </form>
+        
+    </body>
+    
+</html>
