@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab 5</title>
+        <meta charset="utf-8">
+        
+         <script>
+        
+            function formValidate() {
+                //alert("Hello World");
+                
+                var first = document.getElementById("firstName").value;
+                var last = document.getElementById("lastName").value;
+                var email = document.getElementById("address").value;
+                var agenum = document.getElementById("age").value;
+                
+                
+                if (first == "") {
+                alert("Please fill in your first name");
+               document.form.firstName.focus();
+                    return false;
+             } else if (last == "") {
+                alert("Please fill in your last name");
+                document.form.lastName.focus();
+                    return false;
+             }    else if (email == ""){
+                alert("Please fill in your email address");
+                document.form.address.focus();
+                return false;    
+             } else if (email.endsWith("@uwec.edu" == false)) {
+                 alert("Add @uwec to your email");
+                 
+             }
+                
+                else if (agenum == ""){
+                alert("Please fill in your age");
+                document.form.age.focus();
+                return false;
+             }
+                
+                
+            }
+           
+        
+        
+        
+        </script>
+        
+    </head>
+        
+    <body>
+        
+        <form name="form" id="myname" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return formValidate();">
+            <p>First Name:<br><input type="text" name="firstName" id="firstName"></p>
+              
+            <p>Last Name:<br><input type="text" name="lastName" id="lastName"></p>
+            
+            <p>Email Address:<br><input type="text" name="address" id="address"></p>
+            
+            <p>Age:<br><input type="text" name="age" id="age"></p>
+          
+            <input type="submit" name="sub" id="sub">
+        
+        </form>
+    </body>
+    
+</html>
