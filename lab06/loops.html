@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Lab 6</title>
+        <title>Multiplication Table</title>
         <meta charset="utf-8">
         
     </head>
@@ -9,30 +9,29 @@
     <body>
         
         <table border="1">
-            <tr>
             
             <script>
                 var counter = 1;
-                var j = 1;
-                while (counter <= 2) {
+               
+                while (counter <= 9) {
                     document.write("<tr>");
                 
-                    var i =1;
-                    while (i <= 5) {
-                    document.write("<td>" + j + "</td>");
-                        i++;
-                        j++;
-                        
-                    }
+                    document.write("<td>" + (counter * 1) + "</td>");
+                    document.write("<td>" + (counter * 2) + "</td>");
+                    document.write("<td>" + (counter * 3) + "</td>");
+                     document.write("<td>" + (counter * 4) + "</td>");
+                     document.write("<td>" + (counter * 5) + "</td>");
+                     document.write("<td>" + (counter * 6) + "</td>");
+                     document.write("<td>" + (counter * 7) + "</td>");
+                     document.write("<td>" + (counter * 8) + "</td>");
+                     document.write("<td>" + (counter * 9) + "</td>");
                     
                     document.write("</tr>");
-                    counter++;
-                    
+                    counter = counter + 1;
                 }
-                    
                </script>
            
-            </tr>
+           
         </table>
   
     </body>
