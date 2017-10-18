@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Midterm Program 5</title>
-        <meta charset="utf-8">
-    
+        <title>Lab 4</title>
     </head>
+        <meta charset="utf-8">
     <body>
         <script>
-         function myFunction() {
-             
-             var fahrenheitTemp = parseFloat (document.getElementById("fahrenheitValue").value);
-             var celciusTemp = (fahrenheitTemp - 32) * (5/9);
-             
-             document.getElementById("fahrenheitValue").value = celciusTemp;
-             document.tempConvert.fahrenheitValue.style.backgroundColor = "#e5ffe5";
-             
-         }
-        
-        
-        </script>
-        <form name="tempConvert" id="tempConvert" action="#" method="get">
-        <p>Fahrenheit:<input type="text" name="fahrenheitValue" id="fahrenheitValue"></p>
-        <p>Celcius: <input type="text" name="celciusValue" id="celciusValue" readonly> </p>
-        <p><input type="button" name="fToC" id="fToC" value="F -> C" onclick="convert"></p>
+            function myFunction() {
+                
+                var fahrenheit = parseFloat (document.getElementById("tempfahr").value);
+                var celsius = (fahrenheit - 32) * (5/9);
+                
+                document.getElementById("tempcels").value = celsius;
+                document.temp.tempcels.style.backgroundColor = "#e5ffe5";
+                document.temp.tempfahr.style.backgroundColor = "white";
+                
+            }
+                
        
+                
+          
+            
+        </script>
+        <form name="temp" id="converter" action="#" method="get">
+            <p>Fahrenheit:<br><input type="text" name="tempfahr" id="tempfahr"></p>
+            <p>Celsius:<br><input type="text" name="tempcels" id="tempcels"></p>
+            
+            <input type="button" name="fahr" id="fahr" value="F -> C" onclick="myFunction();">
+            
+           
+            
+            
         </form>
-    
-   
+        <p id="words"></p>
+        
     </body>
-
+    
 </html>
